@@ -1,0 +1,12 @@
+name: web-agent
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - requests
+  - beautifulsoup4
+  - fastapi
+  - uvicorn
+  - openai
+  - python-dotenv
+  - pytest
