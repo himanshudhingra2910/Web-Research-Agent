@@ -1,4 +1,4 @@
-# 🧠 Web Research Agent
+#  Web Research Agent
 
 An intelligent, real-time research assistant that searches the web, extracts key insights, and summarizes responses using Azure GPT-4o and SerpAPI.
 
@@ -6,7 +6,7 @@ Built for the **Masonry AI Agent Developer Assignment**.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - 🔎 Real-time web search with SerpAPI
 - 🕸️ Web scraping with BeautifulSoup
@@ -18,19 +18,19 @@ Built for the **Masonry AI Agent Developer Assignment**.
 
 ---
 
-### 🔁 Execution Flow
+###  Execution Flow
 
-1.User submits a research query via CLI or POST API.
-2.search_tool.py fetches relevant links using SerpAPI.
-3.scraper.py extracts text content from those URLs.
-4.analyzer.py sends the text and query to Azure GPT-4o for summarization.
-5.agent.py returns the structured summary.
+1. User submits a research query via CLI or POST API.  
+2. `search_tool.py` fetches relevant links using SerpAPI.  
+3. `scraper.py` extracts text content from those URLs.  
+4. `analyzer.py` sends the text and query to Azure GPT-4o for summarization.  
+5. `agent.py` returns the structured summary.
 
 "If using FastAPI, result is returned in JSON format with status and content."
 
 ---
 
-## 📦 Tech Stack
+##  Tech Stack
 
 | Tool      | Purpose                             |
 |-----------|-------------------------------------|
@@ -101,7 +101,8 @@ web-research-agent/
 https://drive.google.com/file/d/1ta_koSpsOATKX_YKJvP6-UwY19K8Bnbk/view?usp=sharing
 
 ### Author
-Himanshu Dhingra🚀
-AI Developer Intern at R Systems
-himanshudhingra2910@gmail.com
-GitHub
+
+  `Himanshu Dhingra🚀`
+  `AI Developer Intern at R Systems`
+  `himanshudhingra2910@gmail.com`
+  `GitHub`
