@@ -102,7 +102,7 @@ https://drive.google.com/file/d/1ta_koSpsOATKX_YKJvP6-UwY19K8Bnbk/view?usp=shari
 
 ### Author
 
-  `Himanshu Dhingra🚀`
-  `AI Developer Intern at R Systems`
-  `himanshudhingra2910@gmail.com`
-  `GitHub`
+  `Himanshu Dhingra🚀`<br>
+  `AI Developer Intern at R Systems`<br>
+  `himanshudhingra2910@gmail.com`<br>
+  `GitHub`<br>
