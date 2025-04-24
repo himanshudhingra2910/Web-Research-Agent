@@ -98,7 +98,10 @@ web-research-agent/
 └── README.md
 
 ### Demo Video
+💡 **Tip:** For a smoother experience, you can watch the video at **1.7x speed**.
+```bash
 https://drive.google.com/file/d/1ta_koSpsOATKX_YKJvP6-UwY19K8Bnbk/view?usp=sharing
+```
 
 ### Author
 
