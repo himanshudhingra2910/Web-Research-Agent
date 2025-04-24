@@ -1,6 +1,5 @@
 from app.agent import web_research_agent
 
-from app.agent import web_research_agent
 
 def test_llama_3():
     result = web_research_agent("Current status of LLaMA 3 by Meta")
