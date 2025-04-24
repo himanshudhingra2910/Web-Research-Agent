@@ -1,135 +1,107 @@
-Masonry Web Research Agent
+# 🧠 Web Research Agent
 
-A fully autonomous AI research assistant that searches the web, extracts content, and synthesizes intelligent answers using Azure GPT-4o.
+An intelligent, real-time research assistant that searches the web, extracts key insights, and summarizes responses using Azure GPT-4o and SerpAPI.
 
-How It Works
+Built for the **Masonry AI Agent Developer Assignment**.
 
-Query Analysis: Understands the user's question
+---
 
-Search: Uses SerpAPI to find relevant web pages
+## 🚀 Features
 
-Scraping: Extracts content using BeautifulSoup
+- 🔎 Real-time web search with SerpAPI
+- 🕸️ Web scraping with BeautifulSoup
+- 🤖 Content analysis using Azure OpenAI GPT-4o
+- 🧠 Query understanding and synthesis
+- ⚙️ Clean CLI + FastAPI backend
+- 🧪 Tested with `pytest`
+- 📦 Conda-based environment (`environment.yml`)
 
-Synthesis: Summarizes using Azure OpenAI's GPT-4o
+---
 
-Technologies Used
+## 🧠 Architecture Overview
 
-Component
+        ┌─────────────┐
+        │ User Query  │
+        └─────┬───────┘
+              ▼
+    ┌──────────────────┐
+    │  SerpAPI Search  │
+    └─────┬────────────┘
+          ▼
+┌───────────────────────┐
+│  Web Scraper (HTML)   │
+└─────┬─────────────────┘
+      ▼
+┌──────────────────────────────┐
+│ Azure GPT-4o (Summarization)│
+└─────┬────────────────────────┘
+      ▼
+┌──────────────────────────────┐
+│  Structured Summary Output   │
+└──────────────────────────────┘
 
-Tool
+---
 
-AI Model
+## 📦 Tech Stack
 
-Azure OpenAI (GPT-4o)
+| Tool      | Purpose                             |
+|-----------|-------------------------------------|
+| **FastAPI**  | Web API for structured queries     |
+| **BeautifulSoup** | HTML parsing from web pages     |
+| **Azure GPT-4o** | Intelligent summarization       |
+| **SerpAPI**     | Real-time Google search results |
+| **Python + Conda** | Reproducible environment        |
 
-Search
+---
 
-SerpAPI
+## 🛠️ Setup Instructions
 
-Scraping
+### 1. 🔧 Clone the Repository
 
-BeautifulSoup
-
-Config
-
-dotenv
-
-Language
-
-Python 3.10
-
-Project Structure
+```bash
+git clone https://github.com/YOUR_USERNAME/web-research-agent.git
+cd web-research-agent
+2. 🧪 Create Environment
+Using Conda (recommended):
+conda env create -f environment.yml
+conda activate web-agent
+3. 🔐 Setup Environment Variables
+Create a .env file based on .env.example:
+AZURE_OPENAI_API_KEY=your_azure_key
+AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com
+AZURE_DEPLOYMENT_NAME=gpt-4o
+SERPAPI_API_KEY=your_serpapi_key
+4. 💻 Run CLI Agent
+python main.py
+You’ll be prompted to enter a query. The agent will search, scrape, and summarize.
+5. 🌐 Run FastAPI Web Server
+uvicorn api:app --reload
+Open http://127.0.0.1:8000/docs to test via Swagger.
+6. ✅ Run Tests
+pytest tests/
+📁 File Structure
 
 web-research-agent/
-├── app/
-│   ├── agent.py         # Orchestrates the whole pipeline
-│   ├── search_tool.py   # Uses SerpAPI to find results
-│   ├── scraper.py       # Scrapes HTML text
-│   ├── analyzer.py      # Calls GPT-4o
-│   └── utils.py         # Future helper functions
-├── config/settings.py   # Loads .env values
-├── main.py              # Entry point
-├── tests/test_agent.py  # Example test
-├── .env.example         # Template for env vars
-├── examples.md          # Sample queries and answers
+├── app/                # Core agent logic
+│   ├── agent.py
+│   ├── analyzer.py
+│   ├── scraper.py
+│   ├── search_tool.py
+├── config/             # .env loader
+│   └── settings.py
+├── api.py              # FastAPI endpoint
+├── main.py             # CLI interface
+├── tests/              # Pytest file
+├── environment.yml     # Conda env
+├── .env.example        # API key template
+├── .gitignore
 └── README.md
+📹 Loom Demo + Submission
 
-Setup Instructions
+Link to Loom (to be added)
+🤝 Author
 
-Clone the repo:
-
-git clone https://github.com/yourusername/web-research-agent
-cd web-research-agent
-
-Create .env file:
-
-AZURE_OPENAI_API_KEY=your-key
-AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com
-AZURE_DEPLOYMENT_NAME=gpt-4o-bro
-SERPAPI_API_KEY=your-serpapi-key
-
-Note: You need to create a .env file based on .env.example with your own API keys.
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-Run it:
-
-python main.py
-
-Agent Behavior: Decision Flow
-
-Receives query
-
-Generates Google search using SerpAPI
-
-Picks top 5 links
-
-Extracts readable content from them
-
-Combines the content into a single prompt
-
-Sends the prompt to GPT-4o for analysis
-
-Returns summarized research response
-
-Error Handling
-
-Handles unreachable links with fallback messages
-
-Skips empty or invalid pages
-
-Uses try-except blocks to ensure graceful failures
-
-Testing
-
-# tests/test_agent.py
-from app.agent import web_research_agent
-
-def test_basic():
-    result = web_research_agent("Benefits of mindfulness")
-    assert "mindfulness" in result.lower()
-
-Run tests with:
-
-pytest tests/
-
-💡 Prompt Engineering
-
-We use a consistent prompt template:
-
-"You are a helpful research assistant. Based on the following sources, summarize the answer to: [query]"
-
-This ensures factual, clear, helpful responses.
-
-Sample Queries (see examples.md)
-
-
-
-
-
-Author
-
-Himanshu Dhingra AI Developer Intern @ R Systems himanshudhingra2910@gmail.com
-
+Himanshu Dhingra
+AI Developer Intern at R Systems
+himanshudhingra2910@gmail.com
+GitHub
