@@ -2,8 +2,6 @@
 
 An intelligent, real-time research assistant that searches the web, extracts key insights, and summarizes responses using Azure GPT-4o and SerpAPI.
 
-Built for the **Masonry AI Agent Developer Assignment**.
-
 ---
 
 ##  Features
