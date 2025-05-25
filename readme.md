@@ -85,8 +85,7 @@ web-research-agent/
 │   ├── analyzer.py
 │   ├── scraper.py
 │   ├── search_tool.py
-├── config/             # .env loader
-│   └── settings.py
+├── .env                # .env loader
 ├── api.py              # FastAPI endpoint
 ├── main.py             # CLI interface
 ├── tests/              # Pytest file
